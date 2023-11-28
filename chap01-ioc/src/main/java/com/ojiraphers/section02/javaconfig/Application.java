@@ -1,0 +1,17 @@
+package com.ojiraphers.section02.javaconfig;
+
+import com.ojiraphers.common.MemberDTO;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Application {
+    public static void main(String[] args) {
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfiguration.class);
+        MemberDTO member = (MemberDTO) context.getBean("member");
+        System.out.println(member);
+
+
+
+    }
+}
