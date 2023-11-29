@@ -1,0 +1,21 @@
+package com.ojiraphers.section02.annotation.subsection02.qualfier;
+
+import com.ojiraphers.section02.common.Pokemon;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service("pokemonServiceQualifier")
+public class PokemonService {
+//    @Autowired
+//    @Qualifier("pikachu")
+    private Pokemon pokemon;
+
+    @Autowired
+    public PokemonService(@Qualifier("pikachu")Pokemon pokemon) {
+        this.pokemon = pokemon;
+    }
+    public void pokemonAttack(){
+        pokemon.attack();
+    }
+}
