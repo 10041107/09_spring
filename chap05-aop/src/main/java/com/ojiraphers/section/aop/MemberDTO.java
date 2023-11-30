@@ -1,0 +1,42 @@
+package com.ojiraphers.section.aop;
+
+import java.util.SplittableRandom;
+
+public class MemberDTO {
+
+private long id;
+private String name;
+
+    public MemberDTO() {
+    }
+
+    public MemberDTO(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
+
